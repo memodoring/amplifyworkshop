@@ -181,3 +181,39 @@ Vincular funcion y variable al componente *TranslateTextComponent*
   </div>
 ```
 
+## Onceavo Paso
+Agregar funcion para llamar al servicio de generacion de habla con la traduccion como parametro
+```javascript
+  function generateSpeech(){
+    Predictions.convert({
+      textToSpeech:{
+        source:{
+          text:translation
+        }
+      }
+    })
+    .then(result => {
+      let AudioContext = window.AudioContext || window.webkitAudioContext;
+      console.log({ AudioContext });
+      const audioCtx = new AudioContext(); 
+      const source = audioCtx.createBufferSource();
+      audioCtx.decodeAudioData(result.audioStream, (buffer) => {
+
+        source.buffer = buffer;
+        source.connect(audioCtx.destination);
+        source.start(0);
+      }, (err) => console.log({err}));
+    })
+    .catch(err => setTranslation(err));
+  };
+```
+Crear nuevo botton en componente *TranslateTextComponent* y vincular nueva funcion al boton 
+```javascript
+    <div>
+    <input value={originalText} onChange={setChar}></input>
+    <button onClick={generateTranslation}>Traducir</button>
+    <h3>{translation}</h3>
+    <button onClick={generateSpeech}>Escuchar Traduccion</button>
+  </div>
+
+```
