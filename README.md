@@ -10,3 +10,9 @@ Workshop para crear un cliente de traducción y habla con AWS Amplify.
 * [AWS CLI](https://aws.amazon.com/cli/)
 * [Amplify CLI](https://aws-amplify.github.io/docs/cli-toolchain/quickstart)
 * [Reactjs](https://reactjs.org/docs/create-a-new-react-app.html)
+
+## Primer Paso
+Crear un nuevo proyecto usando create-react-app
+```bash
+$ npx create-react-app
+```
