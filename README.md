@@ -40,3 +40,14 @@ Instalar componentes graficos para React de Amplify
 ```
 $ npm i --save aws-amplify
 ``` 
+
+## Cuarto Paso
+Abrir el archivo *App.js* 
+Importar Paquete de Amplify y configurar usando *aws-exports.js*, archivo con referencias a infraestructura en la nube
+```javascript
+import Amplify from 'aws-amplify';
+
+import config from './aws-exports'
+Amplify.configure(config);
+```
+
