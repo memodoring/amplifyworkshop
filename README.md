@@ -111,4 +111,33 @@ return(<div>
   </div>)
 ```
 
+## Octavo Paso
+Agregar servicio de traduccion a nuestro proyecto de *desde la terminal*, usando Amplify CLI 
+```
+amplify add predictions
+```
+Aparecera un wizard.
+Selecciona las siguientes opciones con el teclado.
+* _Convert_
+* _Translate text into a different language_
+* Escoge un nombre
+* _Spanish_
+* _Portuguese_
+* _Auth users only_
 
+Agregar generacion de habla con Amplify CLI, *desde la terminal*
+```
+amplify add predictions
+```
+Con las siguientes opciones 
+* _Convert_
+* _Generate speech audio from text_
+* Escoge un nombre
+* _Portuguese_
+* _Inês_
+* _Auth users only_
+
+Provisionar servicios en la nube
+```
+amplify push
+```
