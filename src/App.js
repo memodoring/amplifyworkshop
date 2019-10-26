@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import './App.css';
-import Amplify from 'aws-amplify';
+import Amplify, {Predictions} from 'aws-amplify';
 import {withAuthenticator} from 'aws-amplify-react';
+import {AmazonAIPredictionsProvider} from '@aws-amplify/predictions';
 import config from './aws-exports';
 Amplify.configure(config);
+Amplify.addPluggable(new AmazonAIPredictionsProvider());
 
 function TranslateTextComponent(){
   const [originalText, setOriginalText] = useState('Escriba aqui para traducir');
