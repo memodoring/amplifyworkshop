@@ -51,3 +51,13 @@ import config from './aws-exports'
 Amplify.configure(config);
 ```
 
+## Quinto Paso
+Importar elemento grafico de autenticacion de AWS Amplify para React
+```javascript
+import { withAuthenticator} from 'aws-amplify-react';
+```
+Decorar componente *App* usando el elemento que importamos
+```javascript
+export default withAuthenticator(App);
+```
+
