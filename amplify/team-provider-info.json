@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplifyworkshop-dev-20191026103111-authRole",
+            "UnauthRoleArn": "arn:aws:iam::310353177760:role/amplifyworkshop-dev-20191026103111-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::310353177760:role/amplifyworkshop-dev-20191026103111-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplifyworkshop-dev-20191026103111-deployment",
+            "UnauthRoleName": "amplifyworkshop-dev-20191026103111-unauthRole",
+            "StackName": "amplifyworkshop-dev-20191026103111",
+            "StackId": "arn:aws:cloudformation:us-east-1:310353177760:stack/amplifyworkshop-dev-20191026103111/e262fdd0-f7f4-11e9-9b45-0aa1af63e98c"
+        }
+    }
+}
