@@ -141,3 +141,15 @@ Provisionar servicios en la nube
 ```
 amplify push
 ```
+
+## Noveno Paso
+Import the Amplify predictions client & plug-in
+```javascript
+import Amplify, {Predictions} from 'aws-amplify';
+import {AmazonAIPredictionsProvider} from '@aws-amplify/predictions'
+```
+Use plugin to configure predictions client 
+```javascript
+Amplify.addPluggable(new AmazonAIPredictionsProvider());
+```
+
