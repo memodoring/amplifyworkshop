@@ -16,3 +16,15 @@ Crear un nuevo proyecto usando create-react-app
 ```bash
 $ npx create-react-app
 ```
+
+## Segundo Paso
+Configurar projecto con Amplify CLI 
+```bash
+$ amplify configure
+```
+Agregar Autenticacion 
+```bash
+$ amplify add Auth
+```
+
+
