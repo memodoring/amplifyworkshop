@@ -13,19 +13,21 @@ Workshop para crear un cliente de traducción y habla con AWS Amplify.
 
 ## Primer Paso
 Crear un nuevo proyecto usando create-react-app
-```bash
+```
 $ npx create-react-app
 ```
 
 ## Segundo Paso
 Inicializar projecto con Amplify CLI 
-```bash
+```
 $ amplify init
 ```
 Agregar Autenticacion 
-```bash
+```
 $ amplify add Auth
+```
 ⌛️
+```
 $ amplify push
 ```
 
