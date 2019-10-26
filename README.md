@@ -25,6 +25,8 @@ $ amplify init
 Agregar Autenticacion 
 ```bash
 $ amplify add Auth
+⌛️
+$ amplify push
 ```
 
 
