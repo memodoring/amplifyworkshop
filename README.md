@@ -153,3 +153,31 @@ Usar plugin para configurar el cliente
 Amplify.addPluggable(new AmazonAIPredictionsProvider());
 ```
 
+## Decimo Paso
+Crear otro hook para manejar el estado del valor de la traduccion
+```javascript
+    const [translation, setTranslation] = useState(`La traduccion aparecera aqui`);
+```
+Crear funcion para llamar al cliente de producciones de [manera asyncrona](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) con el valor capturado por el usuario como parametro
+```javascript
+  function doTranslate(){
+    Predictions.convert({
+      translateText:{
+        source:{
+          text:originalText
+        }
+      }
+    })
+    .then(data=>setTranslation(JSON.stringify(data)))
+    .catch(error=>setTranslation(JSON.stringify(error)));
+  };
+```
+Vincular funcion y variable al componente *TranslateTextComponent*
+```javascript
+  <div>
+    <input value={originalText} onChange={setText}></input>
+    <button onClick={doTranslate}>Traducir</button>
+    <h3>{translation}</h3>
+  </div>
+```
+
