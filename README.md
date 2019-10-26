@@ -18,9 +18,9 @@ $ npx create-react-app
 ```
 
 ## Segundo Paso
-Configurar projecto con Amplify CLI 
+Inicializar projecto con Amplify CLI 
 ```bash
-$ amplify configure
+$ amplify init
 ```
 Agregar Autenticacion 
 ```bash
