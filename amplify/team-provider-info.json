@@ -9,6 +9,11 @@
             "UnauthRoleName": "amplifyworkshop-dev-20191026103111-unauthRole",
             "StackName": "amplifyworkshop-dev-20191026103111",
             "StackId": "arn:aws:cloudformation:us-east-1:310353177760:stack/amplifyworkshop-dev-20191026103111/e262fdd0-f7f4-11e9-9b45-0aa1af63e98c"
+        },
+        "categories": {
+            "auth": {
+                "amplifyworkshop86666342": {}
+            }
         }
     }
 }

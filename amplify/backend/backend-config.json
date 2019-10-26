@@ -1,1 +1,9 @@
-{}
+{
+	"auth": {
+		"amplifyworkshop86666342": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}
