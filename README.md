@@ -61,3 +61,30 @@ Decorar componente *App* usando el elemento que importamos
 export default withAuthenticator(App);
 ```
 
+## Sexto Paso
+Crear nuevo componente usando JSX
+```javascript
+function TranslateTextComponent(){
+  return(<div>
+    <input></input>
+    <button>Translate</button>
+    <h3>Hello World</h3>
+  </div>)
+}
+```
+Reemplazar Hello World con el nuevo component dentro de componente *App*
+```javascript
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <TranslateTextComponent></TranslateTextComponent>
+      </header>
+    </div>
+  );
+}
+```
+Eliminar referencias a archivos no usados (logo)
+
+
+
