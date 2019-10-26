@@ -158,9 +158,9 @@ Crear otro hook para manejar el estado del valor de la traduccion
 ```javascript
     const [translation, setTranslation] = useState(`La traduccion aparecera aqui`);
 ```
-Crear funcion para llamar al cliente de producciones de [manera asyncrona](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) con el valor capturado por el usuario como parametro
+Crear funcion para llamar al cliente de predicciones de [manera asyncrona](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) con el valor capturado por el usuario como parametro
 ```javascript
-  function doTranslate(){
+  function generateTranslation(){
     Predictions.convert({
       translateText:{
         source:{
