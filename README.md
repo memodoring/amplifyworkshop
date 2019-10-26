@@ -31,4 +31,12 @@ $ amplify add Auth
 $ amplify push
 ```
 
-
+## Tercer Paso
+Instalar cliente de Amplify usando NPM
+```
+$ npm i --save aws-amplify 
+```
+Instalar componentes graficos para React de Amplify
+```
+$ npm i --save aws-amplify
+``` 
