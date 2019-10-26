@@ -1,0 +1,14 @@
+{
+    "resourceName": "speechGenerator6f4d02c4",
+    "convertPolicyName": "speechGeneratorPolicy6f4d02c4",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "convertType": "speechGenerator",
+    "language": "pt-PT",
+    "voice": "Ines",
+    "access": "auth"
+}
