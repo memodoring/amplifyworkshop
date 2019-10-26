@@ -27,10 +27,34 @@ function TranslateTextComponent(){
     .catch(error=>setTranslation(JSON.stringify(error)));
   };;
 
+  function generateSpeech(){
+    Predictions.convert({
+      textToSpeech:{
+        source:{
+          text:translation
+        }
+      }
+    })
+    .then(result => {
+      let AudioContext = window.AudioContext || window.webkitAudioContext;
+      console.log({ AudioContext });
+      const audioCtx = new AudioContext(); 
+      const source = audioCtx.createBufferSource();
+      audioCtx.decodeAudioData(result.audioStream, (buffer) => {
+
+        source.buffer = buffer;
+        source.connect(audioCtx.destination);
+        source.start(0);
+      }, (err) => console.log({err}));
+    })
+    .catch(err => setTranslation(err));
+  };
+
   return(<div>
     <input value={originalText} onChange={setChar}></input>
     <button onClick={generateTranslation}>Traducir</button>
     <h3>{translation}</h3>
+    <button onClick={generateSpeech}>Escuchar Traduccion</button>
   </div>)
 }
 
