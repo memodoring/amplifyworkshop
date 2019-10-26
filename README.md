@@ -86,5 +86,29 @@ function App() {
 ```
 Eliminar referencias a archivos no usados (logo)
 
+## Septimo Paso
+Agregar el [hook](https://reactjs.org/docs/hooks-intro.html) useState de React
+```javascript
+import React, {useState} from 'react';
+```
+Agregar hook al componente *TranslateTextComponent* para vincular texto capturado a la variable *originalText*
+```javascript
+    const [originalText, setOriginalText] = useState('Escriba aqui para traducir');
+  };
+```
+Crear funcion en el componente *TranslateTextComponent* para llamar a *setOriginalText* (funcion que modifica la variable originalText) con el valor de la tecla presionada
+```javascript
+function setChar(event){
+    setOriginalText(event.target.value);
+  };
+```
+Vincular funcion y variables al input del componente
+```javascript
+return(<div>
+    <input value={originalText} onChange={setChar}></input>
+    <button>Translate</button>
+    <h3>Traduccion aparecera aqui</h3>
+  </div>)
+```
 
 

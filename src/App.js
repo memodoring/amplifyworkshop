@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Amplify from 'aws-amplify';
 import {withAuthenticator} from 'aws-amplify-react';
@@ -6,10 +6,14 @@ import config from './aws-exports';
 Amplify.configure(config);
 
 function TranslateTextComponent(){
+  const [originalText, setOriginalText] = useState('Escriba aqui para traducir');
+  function setChar(event){
+    setOriginalText(event.target.value);
+  };
   return(<div>
-    <input></input>
+    <input value={originalText} onChange={setChar}></input>
     <button>Translate</button>
-    <h3>Hello World</h3>
+    <h3>Traduccion aparecera aqui</h3>
   </div>)
 }
 
