@@ -5,10 +5,8 @@
 Workshop para crear un cliente de traducción y habla con AWS Amplify.
 
 ## Pre-Requisitos
-* [Python](https://www.python.org/)
-* [Node.js](https://nodejs.org)
-* [Cuenta de AWS](https://console.aws.amazon.com)
-* [AWS CLI](https://aws.amazon.com/cli/)
+* [CLoud 9](https://github.com/aurbac/nodejs-back-and-angular-front/blob/master/docs/v3-preparing-your-development-environment.md)
+* [Cuenta de AWS](https://console.aws.amazon.com)\
 * [Amplify CLI](https://aws-amplify.github.io/docs/cli-toolchain/quickstart)
 * [Reactjs](https://reactjs.org/docs/create-a-new-react-app.html)
 
