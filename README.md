@@ -234,8 +234,8 @@ Vincular funcion y variable al componente *TranslateTextComponent*
 
 ```javascript
   <div>
-    <input value={originalText} onChange={setText}></input>
-    <button onClick={doTranslate}>Traducir</button>
+    <input value={originalText} onChange={setChar}></input>
+    <button onClick={generateTranslation}>Traducir</button>
     <h3>{translation}</h3>
   </div>
 ```
