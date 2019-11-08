@@ -70,6 +70,28 @@ $ amplify push
 
 ## Tercer Paso
 
+Hospedar la aplicación Web usando Amazon S3.
+
+```
+$ amplify add hosting
+```
+
+Seleccionar los siguientes valores:
+
+   ? Select the environment setup: **DEV (S3 only with HTTP)**
+   ? hosting bucket name **loft-app-20191031053228-hostingbucket (Usar el nombre de bucket asignado)**
+   ? index doc for the website **index.html**
+   ? error doc for the website **index.html**
+
+Recibiras una URL en la que fue publicada tu aplicación, **al acceder sigue el proceso de registro e inicia sesión.**
+
+Para subir nuevos cambios de la aplicación React al hospedaje en Amazon S3 usa el comando para publicar.
+
+```
+$ amplify publish
+```
+
+## Cuarto Paso
 Instalar cliente de Amplify usando NPM
 
 ```
@@ -82,7 +104,7 @@ Instalar componentes graficos para React de Amplify
 $ npm i --save aws-amplify-react
 ``` 
 
-## Cuarto Paso
+## Quinto Paso
 
 Abrir el archivo *App.js* 
 
@@ -95,7 +117,7 @@ import config from './aws-exports'
 Amplify.configure(config);
 ```
 
-## Quinto Paso
+## Sexto Paso
 Importar elemento grafico de autenticacion de AWS Amplify para React
 ```javascript
 import { withAuthenticator} from 'aws-amplify-react';
@@ -105,7 +127,7 @@ Decorar componente *App* usando el elemento que importamos
 export default withAuthenticator(App);
 ```
 
-## Sexto Paso
+## Septimo Paso
 Crear nuevo componente usando JSX
 ```javascript
 function TranslateTextComponent(){
@@ -130,7 +152,7 @@ function App() {
 ```
 Eliminar referencias a archivos no usados (logo)
 
-## Septimo Paso
+## Octavo Paso
 Agregar el [hook](https://reactjs.org/docs/hooks-intro.html) useState de React
 ```javascript
 import React, {useState} from 'react';
@@ -155,7 +177,7 @@ return(<div>
   </div>)
 ```
 
-## Octavo Paso
+## Noveno Paso
 
 Agregar servicio de traduccion a nuestro proyecto de *desde la terminal*, usando Amplify CLI 
 
@@ -193,7 +215,7 @@ $ amplify push
 
    ? Are you sure you want to continue? **Yes**
 
-## Noveno Paso
+## Decimo Paso
 
 Importar el cliente & plug-in de Amplify 
 
@@ -206,7 +228,7 @@ Usar plugin para configurar el cliente
 Amplify.addPluggable(new AmazonAIPredictionsProvider());
 ```
 
-## Decimo Paso
+## Onceavo Paso
 
 Crear otro hook para manejar el estado del valor de la traduccion
 
@@ -240,7 +262,7 @@ Vincular funcion y variable al componente *TranslateTextComponent*
   </div>
 ```
 
-## Onceavo Paso
+## Doceavo Paso
 
 Agregar funcion para llamar al servicio de generacion de habla con la traduccion como parametro
 
@@ -281,28 +303,4 @@ Crear nuevo botton en componente *TranslateTextComponent* y vincular nueva funci
 ```
 
 Tu archivo final debe quedar como el siguiente [src/App.js](src/App.js).
-
-# Doceavo Paso
-
-Hospedar la aplicación Web usando Amazon S3.
-
-```
-$ amplify add hosting
-```
-
-Seleccionar los siguientes valores:
-
-   ? Select the environment setup: **DEV (S3 only with HTTP)**
-   ? hosting bucket name **loft-app-20191031053228-hostingbucket (Usar el nombre de bucket asignado)**
-   ? index doc for the website **index.html**
-   ? error doc for the website **index.html**
-
-Recibiras una URL en la que fue publicada tu aplicación, **al acceder sigue el proceso de registro e inicia sesión.**
-
-Para subir nuevos cambios de la aplicación React al hospedaje en Amazon S3 usa el comando para publicar.
-
-```
-$ amplify publish
-```
-
 **¡Felicidades, has creado tu primer aplicación usando AWS Amplify!**
